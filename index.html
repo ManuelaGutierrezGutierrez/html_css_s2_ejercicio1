@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+
+	<body>
+		<header>
+			<!-- Logo -->
+			<img src="./images/Issuu_logo.svg" alt="logo" class="header__logo" />
+
+			<div class="header__sign">
+				<p>Already a user?</p>
+				<a href="#">Sign in</a>
+			</div>
+		</header>
+
+		<main>
+			<h1>Create an Issuu Account</h1>
+
+			<!-- Botones acceso vía redes -->
+
+			<div class="main__login">
+				<button class="buttonLogin buttonLogin--google">
+					Sign with Google
+				</button>
+
+				<button class="buttonLogin buttonLogin--facebook">
+					Continue with Facebook
+				</button>
+			</div>
+
+			<p class="main__p">or with email</p>
+
+			<!-- Formulario -->
+
+			<form
+				autocomplete="off"
+				action="https://reqres.in/api/users"
+				method="post"
+				class="form"
+			>
+				<label for="email" required class="form__label">Email</label>
+				<input
+					type="email"
+					name="email"
+					id="email"
+					placeholder="e.g. johndoe@email.com"
+					pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
+					class="form__input"
+				/>
+
+				<label for="password" required class="form__label">Password</label>
+				<input
+					type="password"
+					name="password"
+					pattern="[A-Za-z0-9]+"
+					id="password"
+					class="form__input"
+				/>
+
+				<div class="checkbox-container">
+					<input type="checkbox" class="form__checkbox" />
+					<label for="terms" required class="form__checkbox"
+						>I accept the <a href="#">Terms of Service</a> and the
+						<a href="#">Professional Terms of Service.</a>
+					</label>
+				</div>
+
+				<div class="button-container">
+					<button type="submit" class="form__button">create account</button>
+				</div>
+			</form>
+		</main>
+
+		<footer>
+			<p class="footer__p">Issuu Inc.</p>
+			<div class="footer-container">
+				<a href="">Terms</a>
+				<a href="">Privacy</a>
+				<a href="">DMCA</a>
+			</div>
+		</footer>
+	</body>
+</html>
